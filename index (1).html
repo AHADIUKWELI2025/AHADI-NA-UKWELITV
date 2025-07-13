@@ -1,0 +1,127 @@
+<!DOCTYPE html>
+<html lang="sw">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Ahadi na Ukweli TV</title>
+  <style>
+    body { font-family: Arial, sans-serif; margin: 0; padding: 0; background: #f0f0f0; }
+    header { background: #007BFF; color: white; padding: 1rem; text-align: center; position: relative; }
+    nav { background: #333; color: white; text-align: center; padding: 1rem; }
+    nav a { color: white; margin: 0 1rem; text-decoration: none; font-weight: bold; }
+    nav a:hover { text-decoration: underline; }
+    main { max-width: 900px; margin: 2rem auto; background: white; padding: 2rem; }
+    section { margin-bottom: 2rem; }
+    footer { background: #222; color: white; text-align: center; padding: 1rem; margin-top: 2rem; }
+    .download-box {
+      background-color: #e8f0fe;
+      border-left: 5px solid #1a73e8;
+      padding: 1rem;
+      margin-top: 1rem;
+    }
+    .download-box a {
+      color: #1a73e8;
+      font-weight: bold;
+      text-decoration: none;
+    }
+    .banner {
+      width: 100%;
+      max-height: 300px;
+      object-fit: cover;
+    }
+    .logo {
+      position: absolute;
+      top: 10px;
+      left: 10px;
+      height: 60px;
+    }
+    .contact-form label {
+      display: block;
+      margin-top: 1rem;
+    }
+    .contact-form input, .contact-form textarea {
+      width: 100%;
+      padding: 0.5rem;
+      margin-top: 0.5rem;
+    }
+    .contact-form button {
+      margin-top: 1rem;
+      padding: 0.7rem 1.5rem;
+      background-color: #007BFF;
+      color: white;
+      border: none;
+      font-size: 1rem;
+      cursor: pointer;
+    }
+    .social-icons a {
+      margin: 0 0.5rem;
+      color: white;
+      text-decoration: none;
+    }
+  </style>
+</head>
+<body>
+  <header>
+    <img src="logo.png" alt="Logo" class="logo" />
+    <img src="banner.jpg" alt="Banner" class="banner" />
+    <h1>AHADI NA UKWELI TV</h1>
+    <p>Jukwaa la mabadiliko kwa kizazi kipya cha viongozi wa Tanzania</p>
+  </header>
+
+  <nav>
+    <a href="#">Nyumbani</a>
+    <a href="#about">Kuhusu Sisi</a>
+    <a href="#downloads">Pakua</a>
+    <a href="#contact">Wasiliana Nasi</a>
+  </nav>
+
+  <main>
+    <section>
+      <h2>Karibu Ahadi na Ukweli TV</h2>
+      <p>Tunakuza kizazi cha vijana walioelimika, wenye maadili, na moyo wa uzalendo. Tovuti hii ni mahali pa kujifunza, kushirikiana na kuongozwa kuelekea Tanzania bora.</p>
+    </section>
+
+    <section id="about">
+      <h2>Kuhusu Sisi</h2>
+      <p>Ahadi na Ukweli TV ni mradi wa mwalimu wa Kiingereza anayejitolea kuelimisha jamii kwa njia ya ubunifu, mijadala, muziki, na vipindi vya elimu vinavyogusa nyanja mbalimbali kama siasa safi, falsafa, michezo, uchumi, na imani ya kiroho.</p>
+    </section>
+
+    <section id="downloads">
+      <h2>Pakua Rasilimali</h2>
+      <div class="download-box">
+        <ul>
+          <li><a href="#">📄 Katiba ya Ahadi na Ukweli (PDF)</a></li>
+          <li><a href="#">🎵 Wimbo: Ahadi na Ukweli (MP3)</a></li>
+          <li><a href="#">🎬 Video: Sauti ya Mabadiliko (MP4)</a></li>
+        </ul>
+      </div>
+    </section>
+
+    <section id="contact">
+      <h2>Wasiliana Nasi</h2>
+      <form class="contact-form">
+        <label for="name">Jina:</label>
+        <input type="text" id="name" name="name" required>
+
+        <label for="email">Barua Pepe:</label>
+        <input type="email" id="email" name="email" required>
+
+        <label for="message">Ujumbe:</label>
+        <textarea id="message" name="message" rows="5" required></textarea>
+
+        <button type="submit">Tuma Ujumbe</button>
+      </form>
+    </section>
+  </main>
+
+  <footer>
+    <p>Fuatilia kwenye mitandao ya kijamii:</p>
+    <div class="social-icons">
+      <a href="#">YouTube</a>
+      <a href="#">Facebook</a>
+      <a href="#">Instagram</a>
+    </div>
+    <p>&copy; 2025 Ahadi na Ukweli TV. Haki zote zimehifadhiwa.</p>
+  </footer>
+</body>
+</html>
