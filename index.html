@@ -1,68 +1,90 @@
+
 <!DOCTYPE html>
 <html lang="sw">
 <head>
   <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
-  <title>Ahadi na Ukweli TV</title>
+  <title>Mtihani wa Kujisahihisha</title>
   <style>
-    body { font-family: Arial, sans-serif; margin: 0; padding: 0; background: #f0f0f0; }
-    header { background: #007BFF; color: white; padding: 1rem; text-align: center; }
-    nav { background: #333; color: white; text-align: center; padding: 1rem; }
-    nav a { color: white; margin: 0 1rem; text-decoration: none; font-weight: bold; }
-    nav a:hover { text-decoration: underline; }
-    main { max-width: 900px; margin: 2rem auto; background: white; padding: 2rem; }
-    section { margin-bottom: 2rem; }
-    footer { background: #222; color: white; text-align: center; padding: 1rem; margin-top: 2rem; }
-    .download-box {
-      background-color: #e8f0fe;
-      border-left: 5px solid #1a73e8;
-      padding: 1rem;
-      margin-top: 1rem;
+    body {
+      font-family: Arial, sans-serif;
+      padding: 20px;
+      background: #f0f8ff;
     }
-    .download-box a {
-      color: #1a73e8;
+    h2 {
+      color: #333;
+    }
+    .swali {
+      margin-bottom: 20px;
+    }
+    button {
+      padding: 10px 15px;
+      font-size: 16px;
+      background-color: #28a745;
+      color: white;
+      border: none;
+      border-radius: 6px;
+      cursor: pointer;
+    }
+    button:hover {
+      background-color: #218838;
+    }
+    #matokeo {
+      margin-top: 20px;
       font-weight: bold;
-      text-decoration: none;
+      font-size: 18px;
+      color: green;
     }
   </style>
 </head>
 <body>
-  <header>
-    <h1>AHADI NA UKWELI TV</h1>
-    <p>Jukwaa la mabadiliko kwa kizazi kipya cha viongozi wa Tanzania</p>
-  </header>
 
-  <nav>
-    <a href="#">Nyumbani</a>
-    <a href="#about">Kuhusu Sisi</a>
-    <a href="#downloads">Pakua</a>
-  </nav>
+<h2>Mtihani wa Kujisahihisha</h2>
 
-  <main>
-    <section>
-      <h2>Karibu Ahadi na Ukweli TV</h2>
-      <p>Tunakuza kizazi cha vijana walioelimika, wenye maadili, na moyo wa uzalendo. Tovuti hii ni mahali pa kujifunza, kushirikiana na kuongozwa kuelekea Tanzania bora.</p>
-    </section>
+<form id="mtihani">
+  <div class="swali">
+    <p>1. Nchi kubwa zaidi duniani ni?</p>
+    <label><input type="radio" name="swali1" value="Rusia"> Rusia</label><br>
+    <label><input type="radio" name="swali1" value="China"> China</label><br>
+    <label><input type="radio" name="swali1" value="India"> India</label>
+  </div>
 
-    <section id="about">
-      <h2>Kuhusu Sisi</h2>
-      <p>Ahadi na Ukweli TV ni mradi wa mwalimu wa Kiingereza anayejitolea kuelimisha jamii kwa njia ya ubunifu, mijadala, muziki, na vipindi vya elimu vinavyogusa nyanja mbalimbali kama siasa safi, falsafa, michezo, uchumi, na imani ya kiroho.</p>
-    </section>
+  <div class="swali">
+    <p>2. Dunia ni mduara?</p>
+    <label><input type="radio" name="swali2" value="Ndiyo"> Ndiyo</label><br>
+    <label><input type="radio" name="swali2" value="Hapana"> Hapana</label>
+  </div>
 
-    <section id="downloads">
-      <h2>Pakua Rasilimali</h2>
-      <div class="download-box">
-        <ul>
-          <li><a href="#">📄 Katiba ya Ahadi na Ukweli (PDF)</a></li>
-          <li><a href="#">🎵 Wimbo: Ahadi na Ukweli (MP3)</a></li>
-          <li><a href="#">🎬 Video: Sauti ya Mabadiliko (MP4)</a></li>
-        </ul>
-      </div>
-    </section>
-  </main>
+  <div class="swali">
+    <p>3. Mji mkuu wa Tanzania ni?</p>
+    <label><input type="radio" name="swali3" value="Dodoma"> Dodoma</label><br>
+    <label><input type="radio" name="swali3" value="Dar es Salaam"> Dar es Salaam</label><br>
+    <label><input type="radio" name="swali3" value="Mwanza"> Mwanza</label>
+  </div>
 
-  <footer>
-    &copy; 2025 Ahadi na Ukweli TV. Haki zote zimehifadhiwa.
-  </footer>
+  <button type="button" onclick="hesabuAlama()">Tuma Majibu</button>
+</form>
+
+<p id="matokeo"></p>
+
+<script>
+  function hesabuAlama() {
+    let alama = 0;
+    const majibuSahihi = {
+      swali1: "Rusia",
+      swali2: "Ndiyo",
+      swali3: "Dodoma"
+    };
+
+    for (let swali in majibuSahihi) {
+      let chaguo = document.querySelector('input[name="' + swali + '"]:checked');
+      if (chaguo && chaguo.value === majibuSahihi[swali]) {
+        alama++;
+      }
+    }
+
+    document.getElementById("matokeo").innerText = "Umepata alama: " + alama + " / 3";
+  }
+</script>
+
 </body>
 </html>
