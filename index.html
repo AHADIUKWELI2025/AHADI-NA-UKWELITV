@@ -1,111 +1,111 @@
 
 <!DOCTYPE html>
-<html lang="sw">
+<html lang="en">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Ahadi na Ukweli TV</title>
-  <style>
-    body {
-      font-family: Arial, sans-serif;
-      margin: 0;
-      padding: 0;
-      background-color: #cc0000;
-    }
-    header {
-      background-color: #003366;
-      color: white;
-      padding: 20px;
-      text-align: center;
-    }
-    nav {
-      background: #990000;
-      padding: 10px;
-      text-align: center;
-    }
-    nav a {
-      color: white;
-      margin: 0 15px;
-      text-decoration: none;
-      font-weight: bold;
-    }
-    nav a:hover {
-      text-decoration: underline;
-    }
-    main {
-      padding: 20px;
-      background-color: #fff0f0;
-    }
-    footer {
-      background-color: #003366;
-      color: white;
-      text-align: center;
-      padding: 10px;
-      position: relative;
-      bottom: 0;
-      width: 100%;
-    }
-    .comment-section {
-      background-color: #ffe5e5;
-      padding: 20px;
-      margin-top: 30px;
-      border-radius: 8px;
-    }
-    .comment-section h3 {
-      margin-top: 0;
-    }
-    textarea {
-      width: 100%;
-      height: 100px;
-      margin-top: 10px;
-      padding: 10px;
-      border-radius: 5px;
-      border: 1px solid #ccc;
-      resize: none;
-    }
-    button {
-      margin-top: 10px;
-      padding: 10px 20px;
-      background-color: #003366;
-      color: white;
-      border: none;
-      border-radius: 5px;
-      cursor: pointer;
-    }
-    button:hover {
-      background-color: #00509E;
-    }
-  </style>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Ahadi na Ukweli Dashboard</title>
+  <link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css" rel="stylesheet">
+  <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
 </head>
-<body>
+<body class="bg-gray-100">
+  <div class="flex h-screen">
+    <!-- Sidebar -->
+    <div class="w-64 bg-blue-900 text-white flex flex-col p-4">
+      <h2 class="text-2xl font-bold mb-6">Ahadi na Ukweli</h2>
+      <nav class="flex flex-col space-y-3">
+        <a href="#exams" class="hover:bg-blue-700 p-2 rounded">📄 PDF Exams</a>
+        <a href="#blog" class="hover:bg-blue-700 p-2 rounded">📰 Blog</a>
+        <a href="#club" class="hover:bg-blue-700 p-2 rounded">🏫 Club Info</a>
+        <a href="#tv" class="hover:bg-blue-700 p-2 rounded">📺 TV Shows</a>
+        <a href="#vote" class="hover:bg-blue-700 p-2 rounded">🗳️ Voting</a>
+        <a href="#ads" class="hover:bg-blue-700 p-2 rounded">💼 Business Ads</a>
+        <a href="#finance" class="hover:bg-blue-700 p-2 rounded">📊 Financial Reports</a>
+        <a href="#translate" class="hover:bg-blue-700 p-2 rounded">🌐 Translator</a>
+        <a href="#editor" class="hover:bg-blue-700 p-2 rounded">🖼️ Photo Editor</a>
+        <a href="#games" class="hover:bg-blue-700 p-2 rounded">🎮 Game Center</a>
+        <a href="#share" class="hover:bg-blue-700 p-2 rounded">🔗 Share Content</a>
+      </nav>
+    </div>
 
-<header>
-  <h1>AHADI NA UKWELI TV</h1>
-  <p>Kwa ajili ya kizazi cha sasa na kijacho</p>
-</header>
+    <!-- Main Content -->
+    <div class="flex-1 overflow-y-auto p-6 space-y-12">
+      <section id="exams">
+        <h2 class="text-xl font-bold mb-2">Upload PDF Exams</h2>
+        <input type="file" accept="application/pdf" class="border p-2 rounded" />
+        <p class="mt-2 text-sm text-gray-600">System will auto-mark MCQs in future version.</p>
+      </section>
 
-<nav>
-  <a href="index.html">Nyumbani</a>
-  <a href="about.html">Kuhusu Sisi</a>
-  <a href="documents.html">Nyaraka</a>
-</nav>
+      <section id="blog">
+        <h2 class="text-xl font-bold mb-2">Blog</h2>
+        <textarea rows="4" placeholder="Andika makala yako hapa..." class="w-full p-2 border rounded"></textarea>
+        <button class="mt-2 bg-blue-600 text-white px-4 py-2 rounded">Tuma</button>
+      </section>
 
-<main>
-  <h2>Karibu kwenye Ahadi na Ukweli TV</h2>
-  <p>Tovuti hii inalenga kuibua viongozi wa kweli, kukuza uelewa wa jamii, na kuhamasisha vijana kushiriki katika maendeleo, siasa safi, na maisha yenye maadili.</p>
+      <section id="club">
+        <h2 class="text-xl font-bold mb-2">Ahadi na Ukweli Club</h2>
+        <p>Hii ni sehemu ya kuonesha habari za club, picha, shughuli na malengo ya vijana.</p>
+      </section>
 
-  <div class="comment-section">
-    <h3>Maoni Yako</h3>
-    <p>Tupatie maoni au ujumbe wako hapa chini:</p>
-    <textarea placeholder="Andika maoni yako hapa..."></textarea>
-    <br>
-    <button type="button">Tuma Maoni</button>
+      <section id="tv">
+        <h2 class="text-xl font-bold mb-2">TV Shows</h2>
+        <p>Orodha ya vipindi kama <strong>Kijana Kijijini</strong> itajumuishwa hapa. Unaweza kupakia clips au YouTube links.</p>
+      </section>
+
+      <section id="vote">
+        <h2 class="text-xl font-bold mb-2">Voting System</h2>
+        <p>Piga kura kwa ajili ya chaguo bora la wanafunzi au viongozi wa club.</p>
+        <button class="bg-green-600 text-white px-4 py-2 rounded">Piga Kura</button>
+      </section>
+
+      <section id="ads">
+        <h2 class="text-xl font-bold mb-2">Business Advertising</h2>
+        <input type="text" placeholder="Weka jina la biashara..." class="border p-2 rounded w-full" />
+        <button class="mt-2 bg-blue-600 text-white px-4 py-2 rounded">Tangaza</button>
+      </section>
+
+      <section id="finance">
+        <h2 class="text-xl font-bold mb-2">Financial Reports</h2>
+        <canvas id="financeChart" height="100"></canvas>
+        <script>
+          const ctx = document.getElementById('financeChart');
+          new Chart(ctx, {
+            type: 'bar',
+            data: {
+              labels: ['Jan', 'Feb', 'Mar', 'Apr'],
+              datasets: [{
+                label: 'Income',
+                data: [120, 190, 30, 50],
+                backgroundColor: 'rgba(54, 162, 235, 0.6)'
+              }]
+            },
+            options: { scales: { y: { beginAtZero: true } } }
+          });
+        </script>
+      </section>
+
+      <section id="translate">
+        <h2 class="text-xl font-bold mb-2">Translator</h2>
+        <textarea placeholder="Andika Kiswahili au Kiingereza hapa..." class="border p-2 w-full rounded"></textarea>
+        <button class="mt-2 bg-blue-600 text-white px-4 py-2 rounded">Tafsiri</button>
+      </section>
+
+      <section id="editor">
+        <h2 class="text-xl font-bold mb-2">Online Photo Editor</h2>
+        <p>Pakua picha na anzisha mchakato wa uhariri mtandaoni (to be linked).</p>
+        <button class="bg-blue-700 text-white px-4 py-2 rounded">Fungua Editor</button>
+      </section>
+
+      <section id="games">
+        <h2 class="text-xl font-bold mb-2">Game Center</h2>
+        <p>Games za kielimu zitaongezwa hapa kama vile quiz au memory cards.</p>
+      </section>
+
+      <section id="share">
+        <h2 class="text-xl font-bold mb-2">Share Content</h2>
+        <button class="bg-purple-600 text-white px-4 py-2 rounded">Tuma kwa Rafiki</button>
+      </section>
+    </div>
   </div>
-</main>
-
-<footer>
-  <p>&copy; 2025 Ahadi na Ukweli TV. Haki zote zimehifadhiwa.</p>
-</footer>
-
 </body>
 </html>
