@@ -1,1 +1,1 @@
-Placeholder file inside assets/
+Placeholder for assets/
